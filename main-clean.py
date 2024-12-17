@@ -24,7 +24,7 @@ cleaner.drop_field(nan_percentage, cutoff=60)
 cleaner.fill_predictors()
 unimputed_data = cleaner.df
 
-# DATA IMPUTATION WITH THE "MODE" STRATEGY
+# DATA IMPUTATION USING CHAINED EQUATIONS (MICE) AND PREDICTIVE MEAN MATCHING (PMM) STRATEGIES
 imputer = Imputer(["Area (m2)", "Bathrooms", "Bedrooms"], unimputed_data)
 imputer.drop_minimal_variance()
 imputer.mice_imputer()
