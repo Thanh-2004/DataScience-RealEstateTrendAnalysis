@@ -1,9 +1,5 @@
 # DataScience-RealEstateTrendAnalysis
 
----
-
-# DataScience-RealEstateTrendAnalysis
-
 
 ## Table of Contents
 
@@ -57,8 +53,8 @@ pip install -r requirements.txt
 1. **Clone the repository:**
 
    ```
-   git clone https://github.com/xt2201/it3320e-human-action-recognition-ucf101.git
-   cd it3320e-human-action-recognition-ucf101
+   git clone https://github.com/Thanh-2004/DataScience-RealEstateTrendAnalysis.git
+   cd DataScience-RealEstateTrendAnalysis
    ```
 
 2. **Install dependencies:**
