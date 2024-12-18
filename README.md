@@ -121,6 +121,32 @@ pip install -r requirements.txt
 ### Data Scraping
 
 ### Data Cleaning
+Data crawled from [rever.com](https://rever.vn/) is complete and clean. Therefore, our efforts is spent in cleaning data from [CafeLand.com](https://cafeland.vn/).
+#### Data Preprocessing
+- **Data Extraction**: Raw data is extracted and formatted for proper usage from `.json` files generated from our spider. The details can be found in `DataCleaning/ExtractingFeatures.py`.
+- **Data Preprocessing**: `DataCleaning/CleanData.py`
+  - One of our main purposes is to predict real estate price based on common characteristics that properties share. To serve this, all data with missing value in **Price (billion VND)** is dropped.
+  - We also drop features with the NaN percentage crossing a certain threshold **(60% in this case)**.
+  - Since real estate from [CafeLand.com](https://cafeland.vn/) should be those in Hanoi, all houses not in Hanoi are excluded as well.
+  - **Address**, **Latitude**, and **Longitude** are used to impute each other with the help from [free GeoCoding API](https://geocode.maps.co/).
+- **Data Imputation**: `DataCleaning/Imputer.py`
+  - **Multivariate Imputation by Chained Equations (MICE)**: Apply for features satisfying the additive assumption in regression.
+  - **Predictive Mean Matching (PMM)**: Apply for features where high correlation (multi-collinearity) exists.
+- **Addition of related data**: `DataCleaning/AdditionalInfo.py`
+Making use of the properties' coordinates and `geopy.Nominatim`, the following fields are added:
+  - **Place Rank**: Describe the extend and importance of a place
+  - **Importance**: How likely it is that an user will search for a given place.
+  - **Postal Code**
+To run the cleaning process, remember to get your GeoCoding API from [free GeoCoding API](https://geocode.maps.co/):
+```
+python3 main-clean.py
+```
+or
+```
+python main-clean.py
+```
+
+After cleaning, data from [rever.com](https://rever.vn/) and [CafeLand.com](https://cafeland.vn/) is stacked. Outliers are removed using the Interquatile Range (`DataCleaning/Outliers.py`)
 
 ### EDA
 
