@@ -271,8 +271,3 @@ Additionally, the presence of high-value outliers across all features points to 
 
 The result of machine learning models shows that they can assist buyers, sellers, and investors in making informed decisions. The classification model can aid in categorizing property types for better organization and targeted marketing by real estate platforms.
 
----
-
-## Acknowledgments
-
----
