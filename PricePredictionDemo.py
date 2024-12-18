@@ -7,7 +7,8 @@ from tkinter import ttk
 import random
 import os
 
-DIRECTORY = "MachineLearningModels"
+# DIRECTORY = "MachineLearningModels"
+DIRECTORY = ''
 property_type_map = {'Căn hộ': "Apartment", 
                      'Căn hộ Studio': "Studio Apartment", 
                      'Nhà phố': "Townhouse", 
@@ -32,6 +33,8 @@ df_display[["Property Type", "Address", "Law Document", "City"]] = encoder.inver
     df[["Property Type", "Address", "Law Document", "City"]]
 )
 df_display["Property Type"] = df_display["Property Type"].apply(convert_to_eng)
+
+# converts numeric values to integers
 df_display = df_display.astype({"Bedrooms":np.int32, 
                                 "Bathrooms":np.int32, 
                                 "Year":np.int32, 
