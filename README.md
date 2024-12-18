@@ -11,8 +11,7 @@
   - [Data Scraping](#data-scraping)
   - [Data Cleaning](#data-cleaning)
   - [EDA](#eda)
-  - [House Price Prediction](#house-price-prediction)
-  - [Classification](#classification)
+  - [Machine Learning Models](#machine-learning-models)
 - [Evaluation Metrics](#evaluation-metrics)
 - [Results](#results)
 - [Analysis](#analysis)
@@ -35,6 +34,11 @@
 The following libraries and frameworks are required for running the project:
 
 - Python 3.10
+- NumPy
+- Pandas
+- Matplotlib
+- Scikit-learn
+- XGBoost
 
 ...
 
@@ -59,8 +63,6 @@ pip install -r requirements.txt
 
 2. **Install dependencies:**
 
-   If you're using a `requirements.txt` file, run:
-
    ```
    pip install -r requirements.txt
    ```
@@ -78,14 +80,30 @@ pip install -r requirements.txt
 
 ### EDA
 
-### House Price Prediction
+### Machine Learning Models
 
-### Classification
+You can find notebooks used to train the ML models in `MachineLearningModels/notebooks`. Each notebook is used to train models using a ML algorithm for the two problems: estate price prediction and property type classification.
+
+To run the demonstration on price prediction, run:
+```
+python3 PricePredictionDemo.py
+```
+or
+```
+python PricePredictionDemo.py
+```
+
+This will run a window to select a random record from the testing dataset and display it, along with the predicted price by a model trained on the training dataset and the actual price of the estate for comparison.
 
 
 ---
 
 ## Evaluation Metrics
+
+For ML models, the following metrics are used to evaluate how well the models perform:
+
+- For the price prediction problem: Root Mean Squared Error (RMSE), Mean and Median Absolute Error (MAE & MedAE), Mean and Median Absolute Percentage Error (MAPE & MedAPE)
+- For the property type classification problem: Accuracy, Precision, Recall, F1 score
 
 ---
 

@@ -7,8 +7,7 @@ from tkinter import ttk
 import random
 import os
 
-# DIRECTORY = "MachineLearningModels"
-DIRECTORY = ''
+DIRECTORY = 'MachineLearningModels'
 property_type_map = {'Căn hộ': "Apartment", 
                      'Căn hộ Studio': "Studio Apartment", 
                      'Nhà phố': "Townhouse", 
