@@ -237,7 +237,14 @@ For ML models, the following metrics are used to evaluate how well the models pe
 
 ### The performance on Real Estates Price Regression with LLM:
 
-![Real Estates Price Regression with LLM](images/llm_regression.png)
+| **K (number of sample)** | **MAE** | **RMSE** | **MedAE** | **MAPE (%)** | **MedAPE (%)** | **Time (m:ss)** |
+| --- | --- | --- | --- | --- | --- | --- |
+| 401 | 4.21 | 5.89 | 2.35 | 54.46 | 53.13 | 2:53 |
+| 301 | 4.30 | 6.30 | 2.17 | 160.55 | 88.21 | 1:50 |
+| 201 | 5.03 | 10.44 | 2.08 | 211.31 | 58.91 | 1:06 |
+| 101 | 9.77 | 12.60 | 9.52 | 191.94 | 73.26 | 1:00 |
+| 51  | 10.34 | 14.16 | 7.60 | 124.38 | 77.63 | 1:03 |
+| 21  | 14.07 | 17.80 | 12.78 | 212.48 | 93.40 | 0:58 |
 
 ### The performance on Real Estates Type Classification:
 
