@@ -74,7 +74,7 @@ The dataset for this project includes the following columns:
 - **City**:
     - The city or region where the property is located.
 
-You can find the processed dataset in the `combinedData.csv` file after scraping
+You can find the processed dataset in the `combinedData.csv` file
 
 ---
 
