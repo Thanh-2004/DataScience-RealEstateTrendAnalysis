@@ -25,8 +25,52 @@
 ---
 
 ## Dataset
+The dataset for this project consists of housing price data collected from two websites: rever.com and cafeland.vn. The data contains information about real estate listings, including prices, location, property type, area, and other relevant features. This dataset is used for building machine learning models to predict property prices and classify property types.
 
+The dataset for this project includes the following columns:
 
+- **Price (billion VND)**:
+   - The price of the property in billion Vietnamese Dong (VND).
+
+- **Area (m2)**:
+   - The area of the property in square meters (m²).
+
+- **Property Type**:
+   - The type of the property (e.g., house, apartment, land, villa, etc.).
+
+- **Bedrooms**:
+   - The number of bedrooms in the property.
+
+- **Bathrooms**:
+   - The number of bathrooms in the property.
+
+- **Address**:
+   - The detailed address of the property.
+
+- **Law Document**:
+   - The legal status of the property, such as ownership documents or other legal papers.
+
+- **Post Date**:
+   - The date the property was listed for sale or rent.
+
+- **Latitude**:
+    - The latitude of the property, used to determine its geographical location on a map.
+
+- **Longitude**:
+    - The longitude of the property.
+
+- **Postal Code**:
+    - The postal code for the area where the property is located.
+
+- **Importance**:
+    - The importance or priority of the property....
+
+- **Place Rank**:
+    - The ranking of the property based on ...
+    - **Example**: `1`, `2`, `3`.
+
+- **City**:
+    - The city or region where the property is located.
 ---
 
 ## Requirements
