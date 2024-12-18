@@ -5,10 +5,10 @@ from DataCleaning.Outliers import OutliersRemoval
 import pandas as pd
 
 # READING THE DATA AND STACK THEM 
-apartment = pd.read_json("CafeLand/data/hanoi_apartment.json")
-private_house = pd.read_json("CafeLand/data/hanoi_private_house.json")
-town_house = pd.read_json("CafeLand/data/hanoi_town_house.json")
-villa = pd.read_json("CafeLand/data/hanoi_villa.json")
+apartment = pd.read_json("DataScraping/CafeLand/data/hanoi_apartment.json")
+private_house = pd.read_json("DataScraping/CafeLand/data/hanoi_private_house.json")
+town_house = pd.read_json("DataScraping/CafeLand/data/hanoi_town_house.json")
+villa = pd.read_json("DataScraping/CafeLand/data/hanoi_villa.json")
 data = pd.concat([apartment, private_house, town_house, villa], ignore_index=True)
 
 # START THE PRE-PROCESS FOR IMPUTATION
