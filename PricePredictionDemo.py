@@ -5,19 +5,24 @@ import tkinter as tk
 from tkinter import messagebox
 from tkinter import ttk
 import random
+import os
 
+DIRECTORY = "MachineLearningModels"
 property_type_map = {'Căn hộ': "Apartment", 
                      'Căn hộ Studio': "Studio Apartment", 
                      'Nhà phố': "Townhouse", 
                      'Nhà riêng': "Private House", 
                      'biệt thự': "Mansion"}
 def convert_to_eng(name:str) -> str:
+    '''
+    Converts property types' names from Vietnamese to English (for presentation)
+    '''
     return property_type_map[name] if name in property_type_map.keys() else "undefined"
 
 
-encoder = pkl.load(open("models/CategoricalDataEncoder.h5", 'rb'))
-model = pkl.load(open("models/RandomForest.h5", 'rb'))
-data = pd.read_csv("data/test_data_2nd.csv")
+encoder = pkl.load(open(os.path.join(DIRECTORY, "models/CategoricalDataEncoder.h5"), 'rb'))
+model = pkl.load(open(os.path.join(DIRECTORY, "models/RandomForest.h5"), 'rb'))
+data = pd.read_csv(os.path.join(DIRECTORY, "data/test_data_2nd.csv"))
 
 df = data.iloc[:, 1:-1]
 y = data.iloc[:, -1]
