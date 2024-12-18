@@ -10,3 +10,6 @@ statsmodels
 seaborn
 autoimpute
 tkinter
+langchain
+tqdm
+langchain_together
