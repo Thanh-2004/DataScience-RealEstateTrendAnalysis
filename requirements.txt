@@ -4,3 +4,9 @@ scikit-learn
 xgboost
 cupy
 matplotlib
+scrapy
+geopy
+statsmodels
+seaborn
+autoimpute
+tkinter
