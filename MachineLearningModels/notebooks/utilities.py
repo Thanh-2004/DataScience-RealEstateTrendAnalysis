@@ -1,6 +1,6 @@
 from sklearn.metrics import mean_absolute_error, mean_squared_error, root_mean_squared_error, \
-    mean_absolute_percentage_error, accuracy_score, precision_score, \
-    recall_score, f1_score, median_absolute_error
+                            mean_absolute_percentage_error, accuracy_score, precision_score, \
+                            recall_score, f1_score, median_absolute_error
 from pandas import DataFrame, Series
 
 def cross_val_metrics_calculate(model, X:DataFrame, y:Series, splits, metrics=['mse', 'rmse', 'mae', 'mape', 'medae', 'medape']):
